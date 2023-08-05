@@ -1,0 +1,25 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='gpt4all-code-review',
+    version='0.15',
+    packages=find_packages(),
+    install_requires=[
+        "argparse",
+        "gpt4all",
+        "prettytable",
+        "datetime",
+        "console_progressbar",
+    ],
+    author='Evgenii Evstafev',
+    author_email='chigwel@gmail.com',
+    description='A standalone code review tool based on GPT4ALL.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/chigwell/gpt4all-code-review',
+    entry_points={
+        'console_scripts': [
+            'gpt4all_code_review = gpt4all_code_review.gpt4all_code_review:main',
+        ],
+    },
+)
