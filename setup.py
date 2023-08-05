@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gpt4all-code-review',
-    version='0.15',
+    version='0.16',
     packages=find_packages(),
     install_requires=[
         "argparse",
@@ -13,7 +13,7 @@ setup(
     ],
     author='Evgenii Evstafev',
     author_email='chigwel@gmail.com',
-    description='A standalone code review tool based on GPT4ALL.',
+    description='A self-contained tool for code review powered by GPT4ALL.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/chigwell/gpt4all-code-review',
