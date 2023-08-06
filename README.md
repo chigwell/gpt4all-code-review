@@ -16,11 +16,21 @@ This program is designed to assist developers by automating the process of code 
 Make sure you have Python 3.x installed.
 
 ```bash
-pip install -r requirements.txt
+pip install gpt4all-code-review
 ```
 or
 ```bash
-pip3 install -r requirements.txt
+pip3 install gpt4all-code-review
+```
+
+For updates, use:
+
+```bash
+pip install gpt4all-code-review --upgrade
+```
+or
+```bash
+pip3 install gpt4all-code-review --upgrade
 ```
 
 ## Usage
