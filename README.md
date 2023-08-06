@@ -28,7 +28,7 @@ pip3 install -r requirements.txt
 You can run the program from the command line with various options:
 
 ```bash
-gpt4all_code_review --file <file_path> --all
+gpt4all_code_review --file <file_path>
 ```
 
 ### Options
