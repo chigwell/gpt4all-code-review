@@ -11,10 +11,10 @@ SYSTEM_TEMPLATE = 'Imagine that you are a developer, and you are reviewing the c
 
 
 class CodeAnalyzer:
-    def __init__(self, model_name, scan_all, output_type, export, export_folder):
+    def __init__(self, model_name, scan_all, output, export, export_folder):
         self.model_name = model_name
         self.scan_all = scan_all
-        self.output_type = output_type
+        self.output_type = output
         self.export = export
         self.export_folder = export_folder or "code_review_results" if export else None
         self.model = GPT4All(model_name)
