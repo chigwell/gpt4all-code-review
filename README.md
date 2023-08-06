@@ -1,3 +1,6 @@
+[![PyPI version](https://badge.fury.io/py/gpt4all-code-review.svg)](https://badge.fury.io/py/gpt4all-code-review)  [![Downloads](https://static.pepy.tech/personalized-badge/gpt4all-code-review?period=total&units=international_system&left_color=black&right_color=green&left_text=Downloads)](https://pepy.tech/project/gpt4all-code-review) [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+[![PyPI format](https://img.shields.io/pypi/format/gpt4all-code-review.svg)](https://pypi.python.org/pypi/gpt4all-code-review/)
+ 
 # Code Review Automation Tool
 
 This program is designed to assist developers by automating the process of code review. By leveraging a pre-trained standalone machine learning model (e.g., GPT-4), it reads source code files and provides suggestions for improvements.
