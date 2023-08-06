@@ -125,7 +125,7 @@ class CodeAnalyzer:
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="check.py")
+    parser = argparse.ArgumentParser(description="gpt4all_code_review")
     parser.add_argument("--model", help="Specifies the model name. Default is orca-mini-3b.ggmlv3.q4_0.bin", default=DEFAULT_MODEL_NAME)
     parser.add_argument("--file", help="Specifies the file path to analyze. If not provided, all files in the current directory will be analyzed")
     parser.add_argument("--all", help="Includes all files and folders in the current directory for scanning", action='store_true')
