@@ -82,14 +82,20 @@ class CodeAnalyzer:
             os.makedirs(self.export_folder)
 
         exporters = {
-            'text': self.export_as_text,
+            'plain': self.export_as_plain_text,
+            'text': self.export_as_text_table,
             'json': self.export_as_json,
             'xml': self.export_as_xml,
         }
         export_func = exporters.get(self.output_type, lambda *args: print("Unknown output type"))
         export_func(results)
 
-    def export_as_text(self, results):
+    def export_as_plain_text(self, results):
+        print("\n".join(f"{result[0]}: {result[1]}" for result in results))
+        if self.export_folder:
+            self.write_to_file("\n".join(f"{result[0]}: {result[1]}" for result in results), ".txt")
+
+    def export_as_text_table(self, results):
         t = PrettyTable(['File path', 'Suggestions'])
         for result in results:
             t.add_row(result)
@@ -123,7 +129,7 @@ def parse_arguments():
     parser.add_argument("--model", help="Specifies the model name. Default is orca-mini-3b.ggmlv3.q4_0.bin", default=DEFAULT_MODEL_NAME)
     parser.add_argument("--file", help="Specifies the file path to analyze. If not provided, all files in the current directory will be analyzed")
     parser.add_argument("--all", help="Includes all files and folders in the current directory for scanning", action='store_true')
-    parser.add_argument("--output", help="Output type (default: txt). Options: txt, json, xml", default="text")
+    parser.add_argument("--output", help="Output type (default: plain). Options: plaint, txt (prettytable), json, xml", default="plain")
     parser.add_argument("--export", help="Export to file (default: False)")
     parser.add_argument("--export-folder", help="Export to folder (default: ./code_review_results)")
 

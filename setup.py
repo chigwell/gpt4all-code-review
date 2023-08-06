@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='gpt4all-code-review',
-    version='0.17',
+    version='0.18',
     packages=find_packages(),
     install_requires=[
         "argparse",

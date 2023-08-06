@@ -37,7 +37,7 @@ gpt4all_code_review --file <file_path> --all
 - `--model`: Specifies the model name. Default is `"orca-mini-3b.ggmlv3.q4_0.bin"`.
 - `--file`: Specifies the file path to analyze. If not provided, all files in the current directory will be analyzed.
 - `--all`: Includes all files and folders in the current directory for scanning.
-- `--output`: Output type (default: `txt`). Options: `txt`, `json`, `xml`.
+- `--output`: Output type (default: `plain`). Options: `plain`, `txt` (prettytable), `json`, `xml`.
 - `--export`: Export to file (default: `False`).
 - `--export-folder`: Export to folder (default: `./code_review_results`).
 ### Example
@@ -56,7 +56,8 @@ gpt4all_code_review --all
 
 ## Output Formats
 
-- **Text:** A human-readable table with file paths and suggestions.
+- **PLAIN:** A human-readable plain txt file.
+- **TXT:** A human-readable table (prettytable) with file paths and suggestions.
 - **JSON:** A machine-readable format that can be parsed programmatically.
 - **XML:** An alternative machine-readable format.
 
